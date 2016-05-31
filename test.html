@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Single Page Application: Angular</title>
+  <link rel="stylesheet" type="text/css" href="/app/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/app/lib/font-awesome-4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/app/lib/bootstrap-select-1.10.0/dist/css/bootstrap-select.min.css">
+</head>
+<body>
+  <select class="selectpicker">
+    <option>Mustard</option>
+    <option>Ketchup</option>
+    <option>Relish</option>
+  </select>
+  <script src="/app/lib/jquery-1.12.3/jquery-1.12.3.min.js"></script>
+  <script src="/app/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="/app/lib/bootstrap-select-1.10.0/dist/js/bootstrap-select.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".selectpicker").selectpicker({
+        size: 4
+      });
+    });
+  </script>
+</body>
+</html>

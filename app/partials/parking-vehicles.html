@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group">
+    <ul class="nav nav-pills">
+      <li role="presentation" ng-repeat="datum in vehicleStatistics | orderStatisticsData:sortDirection+sortBy" ng-switch="datum.type" ng-class="{active: (datum.type | lowercase) == vehicleType}">
+        <a ng-switch-when="Total" href="#/parking-vehicles">{{datum.type}} <span class="badge">{{datum.quantity}}</span></a>
+        <a ng-switch-default href="#/parking-vehicles/{{datum.type | lowercase | replaceCharacter:' ':'-'}}">{{datum.type}} <span class="badge">{{datum.quantity}}</span></a>
+      </li>
+
+      <!-- SortBy -->
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href>
+          <i class="fa fa-sort fa-lg" aria-hidden="true"></i> Sort by</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-left">
+          <li><a ng-click="updateSortBy('type');"> <i class="fa fa-lg" ng-class="{'fa-sort-alpha-asc' : sortDirections['type'] !== '+', 'fa-sort-alpha-desc' : sortDirections['type'] !== '-'}" aria-hidden="true"></i> Type</a></li>
+          <li><a ng-click="updateSortBy('quantity');"> <i class="fa fa-lg" ng-class="{'fa-sort-numeric-asc' : sortDirections['quantity'] !== '+', 'fa-sort-numeric-desc' : sortDirections['quantity'] !== '-'}" aria-hidden="true"></i> Quantity</a></li>
+        </ul>
+      </li>
+      <!-- /SortBy -->
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="panel panel-default panel-parking-vehicle" >
+      <form role="form" name="parkingVehicleForm">
+        <div class="panel-heading">
+          <div>
+            <input type="text" class="panel-title panel-title-input" placeholder="Number plate" ng-model="parkingVehicle.numberPlate">
+          </div>
+          <div>
+            <input type="text" class="parking-lot-no" placeholder="Parking Lot No" required ng-model="parkingVehicle.parkingLot">
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <div ng-hide="vehicleType">
+              <span class="label label-info">Type</span>
+              <select class="inline-block" name="vehicleType" ng-model="parkingVehicle.type" ng-options="type for type in vehicleTypesData.availableOptions track by type"></select>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-default">Check-in</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat-start="parkingVehicle in parkingVehicles | filter:'G'" >
+    <div class="panel panel-default panel-parking-vehicle" ng-class="{'panel-no-number-plate': !parkingVehicle.numberPlate}" >
+      <div class="panel-heading">
+        <h3 class="panel-title">{{(parkingVehicle.numberPlate | truncate:20) || parkingVehicle.parkingLot}}</h3>
+        <p ng-if="parkingVehicle.numberPlate && parkingVehicle.parkingLot" class="text-muted">{{parkingVehicle.parkingLot}}</p>
+      </div>
+      <div class="panel-body">
+        <p ng-hide="vehicleType"><span class="label label-info">Type</span> {{parkingVehicle.type}}</p>
+        <p><span class="label label-default">Check-in</span> {{parkingVehicle.checkinTime | date: "MMM dd, yyyy - HH:mm:ss"}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix visible-sm-block" ng-if="($index + 2) % 2 == 0"></div>
+  <div class="clearfix visible-md-block" ng-if="($index + 2) % 3 == 0"></div>
+  <div class="clearfix visible-lg-block" ng-repeat-end ng-if="($index + 2) % 4 == 0"></div>
+</div>

@@ -1,0 +1,186 @@
+.parking-theme div[ng-view] {
+  margin-top: 15px;
+}
+
+.parking-theme select {
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.parking-theme .inline-block {
+    display: inline-block;
+}
+
+/* Overwrite .panel-title */
+.parking-theme h1.panel-title {
+  font-size: 36px;
+}
+
+.parking-theme h2.panel-title {
+  font-size: 30px;
+}
+
+.parking-theme h3.panel-title {
+  font-size: 24px;
+}
+
+/* .panel-parking-vehicle */
+.parking-theme .panel-parking-vehicle {
+  border: 0px solid transparent;
+  border-radius: 5px 5px 10px 10px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading {
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 1px solid;
+  background-color: white;
+  color: #FF9A13;
+}
+
+
+.parking-theme .panel-parking-vehicle .panel-heading .text-muted {
+  color: #0DAF6A;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.parking-theme .panel-parking-vehicle form {
+  overflow-x: hidden;
+}
+
+
+.parking-theme .panel-parking-vehicle .panel-heading input{
+  border: 0px;
+  padding: 0px;
+  text-transform: uppercase;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input:focus{
+  outline: none;
+  border-bottom: 1px dotted
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input::-moz-placeholder, {
+  color: inherit;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input:-moz-placeholder, {
+  color: inherit;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input:-ms-input-placeholder {
+  color: inherit;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input:focus::-moz-placeholder, {
+  color: transparent;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input:focus:-moz-placeholder, {
+  color: transparent;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input.panel-title-input{
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.parking-theme .panel-parking-vehicle .panel-heading input.parking-lot-no {
+  color: #0DAF6A;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+
+.parking-theme .panel-parking-vehicle.panel-no-number-plate .panel-heading {
+  background-color: white;
+  color: #2198F3;
+}
+
+/* .panel-parking-lot */
+.parking-theme .panel-parking-lot {
+  border: 0px solid transparent;
+  border-radius: 10px 30px 10px 30px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.parking-theme .panel-parking-lot .panel-heading {
+  background: #0C9B96;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 3px dotted white;
+}
+
+.parking-theme .panel-parking-lot .panel-heading .panel-title {
+  color: #FFAF14;
+}
+
+.parking-theme .panel-parking-lot .panel-body {
+  border: 3px dotted #0C9B96;
+  padding: 0px;
+}
+
+.parking-theme .panel-parking-lot .panel-body .parking-lot-statistics{
+  margin: 0px;
+  border-left: 3px dotted #0C9B96;
+  border-right: 3px dotted #0C9B96;
+  padding: 0px;
+}
+
+.parking-theme .panel-parking-lot .panel-body .parking-lot-statistics .title{
+  margin: 0px;
+}
+
+.parking-theme .panel-parking-lot .panel-body .parking-lot-statistics .available-parking-lot {
+  border-right: 3px dotted white;
+  padding: 0px;
+  background-color: #0C9B96;
+}
+
+.parking-theme .panel-parking-lot .panel-body .parking-lot-statistics .available-parking-lot-inner {
+  border-right: 3px dotted #0C9B96;
+  padding: 1px 0px 1px 10px;
+  background-color: white;
+}
+
+.parking-theme .panel-parking-lot .panel-body .parking-lot-statistics .occupied-parking-lot {
+  padding: 0px 0px 0px 10px;
+}
+
+
+.parking-theme .panel-parking-lot .panel-footer {
+  border-radius: 0px 0px 10px 10px;
+  background-color: #0C9B96;
+  border-top: 3px dotted white;
+}
+
+.parking-theme .panel-parking-lot .panel-footer .text-muted {
+  color: #1D4AAA;
+  margin-bottom: 5px;
+  font-weight: 600;
+}

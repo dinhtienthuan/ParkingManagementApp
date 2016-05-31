@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Single Page Application: Angular</title>
+  <link rel="stylesheet" type="text/css" href="/app/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/app/lib/font-awesome-4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/app/css/justified-nav.css">
+  <link rel="stylesheet" type="text/css" href="/app/css/parking-management.css">
+</head>
+<body class="parking-theme">
+  <div class="container">
+    <div class="masthead">
+      <h3 class="text-muted">Parking Management</h3>
+      <nav>
+        <ul class="nav nav-justified">
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/parking-vehicles">Parking Vehicles</a></li>
+          <li><a href="#/parking-lots">Parking Lots</a></li>
+          <li><a href="#/about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div ng-view></div>
+
+    <footer class="footer">
+      <p>&copy; 2015 Company, Inc.</p>
+    </footer>
+  </div>
+  <script src="/app/lib/jquery-1.12.3/jquery-1.12.3.min.js"></script>
+  <script src="/app/lib/angular-1.5.5/angular.js"></script>
+  <script src="/app/lib/angular-1.5.5/angular-route.js"></script>
+  <script src="/app/lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="/app/js/app.js"></script>
+  <script src="/app/js/configs/configs.js"></script>
+  <script src="/app/js/services/parkingVehicleService.js"></script>
+  <script src="/app/js/services/parkingLotService.js"></script>
+  <script src="/app/js/filters/filters.js"></script>
+  <script src="/app/js/constants/constants.js"></script>
+  <script src="/app/js/directives/directives.js"></script>
+  <script src="/app/js/controllers/controllers.js"></script>
+</body>
+</html>
